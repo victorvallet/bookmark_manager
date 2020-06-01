@@ -1,7 +1,9 @@
 <div>
 <p>Here are your bookmarks</p>
+<ul>
 <% @bookmarks.each do |bookmark| %>
-  <%= bookmark %>
+  <li href=<%= bookmark %>><%= bookmark %></li>
 <% end %>
+<ul>
 
 </div>
