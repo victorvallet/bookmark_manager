@@ -1,7 +1,11 @@
-feature "visit the home page" do
-    scenario "the user can see can click view bookmarks" do
-      visit('/')
-      click_button 'View Bookmarks'
-      expect(page).to have_content("Here are your bookmarks")
-    end
+require 'bookmark'
+
+describe Bookmark do
+  it 'should respond to all' do
+    expect(Bookmark).to respond_to(:all)
   end
+
+  it 'should return a list of bookmarks ' do
+    expect(Bookmark.all).to include("www.google.com")
+  end
+end
