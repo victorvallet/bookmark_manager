@@ -6,6 +6,6 @@ describe Bookmark do
   end
 
   it 'should return a list of bookmarks ' do
-    expect(Bookmark.all).to include("www.google.com")
+    expect(Bookmark.all).to include("http://www.google.com")
   end
 end
