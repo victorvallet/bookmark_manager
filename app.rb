@@ -7,7 +7,7 @@ get '/' do
 end
 
 get '/bookmarks' do
-  @bookmark = Bookmark.new
+  @bookmarks = Bookmark.all
   erb :bookmarks
 end
 
